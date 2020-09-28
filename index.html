@@ -25,7 +25,8 @@
     ></script>
     <script type="text/babel">
       function App(props) {
-        const name = props.studentName;
+        const name = props.studentName ? props.studentName : "Sally";
+
         return (
           <div>
             <header>
@@ -93,7 +94,10 @@
         )
       }
 
-      ReactDOM.render(<App />, document.getElementById("application-root"));
+      ReactDOM.render(
+        <App studentName="Gaaaaarrryyyy" />,
+        document.getElementById("application-root")
+      );
     </script>
   </body>
 </html>
