@@ -24,8 +24,9 @@
       crossorigin
     ></script>
     <script type="text/babel">
+      App.defaultProps = { studentName: "Sally" };
       function App(props) {
-        const name = props.studentName ? props.studentName : "Sally";
+        const name = props.studentName;
 
         return (
           <div>
@@ -83,6 +84,7 @@
                       sally@IntenetExplorer.old
                     </a>
                   </p>
+                  {/* check 1 2*/}
                   <p>
                     My phone number is:
                     <a href="tel:+34100572415">+34 100 57 24 15</a>
@@ -94,10 +96,7 @@
         )
       }
 
-      ReactDOM.render(
-        <App studentName="Gaaaaarrryyyy" />,
-        document.getElementById("application-root")
-      );
+      ReactDOM.render(<App />, document.getElementById("application-root"));
     </script>
   </body>
 </html>
