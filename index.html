@@ -24,7 +24,9 @@
       crossorigin
     ></script>
     <script type="text/babel">
-      function App() {
+      function App(props) {
+        const name = props.studentName ? props.studentName : "Sally";
+
         return (
           <div>
             <header>
@@ -41,7 +43,7 @@
               <section id="introduction">
                 <img src="ilhana.jpg" />
                 <p>
-                  Hi I'm Sally I'm 25 and below this line you'll find more
+                  Hi I'm {name} I'm 25 and below this line you'll find more
                   information about me.
                 </p>
               </section>
@@ -92,7 +94,10 @@
         );
       }
 
-      ReactDOM.render(<App />, document.getElementById("application-root"));
+      ReactDOM.render(
+        <App studentName="Gaaaaarrryyyy" />,
+        document.getElementById("application-root")
+      );
     </script>
   </body>
 </html>
